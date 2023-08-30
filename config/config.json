@@ -1,0 +1,25 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "_gerishon",
+    "database": "smartschool",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "migrationStorage": "sequelize",
+    "migrationsPath": "db/migrations"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "_gerishon",
+    "database": "smartschool",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "_gerishon",
+    "database": "smartschool",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

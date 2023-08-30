@@ -1,0 +1,25 @@
+version: '3'
+services:
+  smartschoolApp:
+    image: drgerishon/smart-school:0.0.1.RELEASE
+    networks:
+      - mynetwork
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_OPTIONS=--max-old-space-size=512
+      - DB_HOST=mypostgres  # <-- Add this line to set DB_HOST
+    depends_on:
+      - mypostgres
+  mypostgres:
+    image: postgres:alpine
+    environment:
+      POSTGRES_PASSWORD: _gerishon
+    ports:
+      - "5432:5432"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
